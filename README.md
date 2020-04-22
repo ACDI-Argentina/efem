@@ -1,10 +1,12 @@
-# EFEM Starter
+# El Futuro está en el Monte
 
-Este módulo contiene los scripts necesarios para la ejecución de EFEM.
+La documentación sobre el proyecto se encuentra en la [wiki](https://github.com/ACDI-Argentina/efem/wiki).
+
+## Ejecución
+
+En este apartado se encuentran las instrucciones para realizar el build y ejecución del proyecto. Las instrucciones están basadas en el trabajo de [Jurek Brisbane](https://github.com/Giveth/giveth-dapp/files/3674808/givethBuildStartScripts_2019-09-29.zip).
 
 Probado sobre **Ubuntu 18.04.3 LTS**.
-
-Estos scrips están basados en el trabajo de [Jurek Brisbane](https://github.com/Giveth/giveth-dapp/files/3674808/givethBuildStartScripts_2019-09-29.zip).
 
 1.  Instalación de herramientas de construcción:
     - OpenJDK 8
@@ -12,21 +14,27 @@ Estos scrips están basados en el trabajo de [Jurek Brisbane](https://github.com
     - NPM
     - Node.js
 
-    `sudo ./1-tools.sh`
+```
+    $ sudo ./1-tools.sh
+```
 
 2.  Instalación de servicios.
     - IPFS
     - MongoDB
     - RSK Node
 
-    `sudo ./2-services.sh`
+```
+    $ sudo ./2-services.sh
+```
 
 - Build de los módulos.
     - [EFEM Mailer](https://github.com/ACDI-Argentina/efem-mailer)
     - [EFEM Feathers](https://github.com/ACDI-Argentina/efem-feathers)
     - [EFEM Dapp](https://github.com/ACDI-Argentina/efem-dapp)
 
-    `sudo ./3-build.sh`
+```
+    $ sudo ./3-build.sh
+```
 
 - Inicio de los servicios y módulos.
     - IPFS
@@ -34,4 +42,6 @@ Estos scrips están basados en el trabajo de [Jurek Brisbane](https://github.com
     - [EFEM Feathers](https://github.com/ACDI-Argentina/efem-feathers)
     - [EFEM Dapp](https://github.com/ACDI-Argentina/efem-dapp)
 
-    `sudo ./4-start.sh`
+```
+    $ sudo ./4-start.sh
+```

@@ -19,7 +19,8 @@ gnome-terminal --tab --title="RSK Node Start" -- bash -c "cd rsk-node && java -j
 echo '--------------------------------------'
 echo 'IPFS Start'
 echo '--------------------------------------'
-gnome-terminal --tab --title="start ipfs" -- bash -c "ipfs daemon ; exec bash"
+#gnome-terminal --tab --title="start ipfs" -- bash -c "ipfs daemon ; exec bash"
+ipfs daemon
 
 echo '--------------------------------------'
 echo 'EFEM Mailer Start'

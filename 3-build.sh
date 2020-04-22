@@ -21,19 +21,23 @@
 # Now goes the bash script to execute:
 # ----------------------------------------------------------------------------
 #export repo=/media/veracrypt1/repo
-export repo=/home/mauricio/dev/project/acdi/efem
+#export repo=/home/mauricio/dev/project/acdi/efem
 
 echo '--------------------------------------'
 echo 'EFEM Mailer Build'
 echo '--------------------------------------'
 #------------- dapp-mailer
-gnome-terminal --tab --title="EFEM Mailer Build" -- bash -c "cd $repo/efem-mailer && npm install ; exec bash"
-cd $repo/efem-mailer
+cd ..
+cd efem-mailer
+npm install
+#gnome-terminal --tab --title="EFEM Mailer Build" -- bash -c "cd $repo/efem-mailer && npm install ; exec bash"
+#cd $repo/efem-mailer
 cp config/default.json config/development.json 
 # set yourself as mailgun user on https://app.mailgun.com/
 # change user/pass in config/development.json
 # restart dapp-mailer for change to take efect.
 yarn install
+cd ..
 
 echo '--------------------------------------'
 echo 'EFEM Feathers Build'
@@ -41,13 +45,20 @@ echo '--------------------------------------'
 #------------- feathers-giveth
 # This will remove mongo db for a fresh start (e.g. first time)
 #gnome-terminal --tab --title="EFEM Feathers Build" -- bash -c "cd $repo/efem-feathers && echo yes | npm install && yarn deploy-local; exec bash"
-gnome-terminal --tab --title="EFEM Feathers Build" -- bash -c "cd $repo/efem-feathers && echo yes | npm install ; exec bash"
+cd efem-feathers
+npm install
+cd ..
+#gnome-terminal --tab --title="EFEM Feathers Build" -- bash -c "cd $repo/efem-feathers && echo yes | npm install ; exec bash"
 
 echo '--------------------------------------'
 echo 'EFEM Dapp Build'
 echo '--------------------------------------'
 #-------------- giveth-dapp
-gnome-terminal --tab --title="EFEM Dapp Build" -- bash -c "cd $repo/efem-dapp && npm install && npm run build; exec bash"
+cd efem-dapp
+npm install
+npm run build
+cd ..
+##gnome-terminal --tab --title="EFEM Dapp Build" -- bash -c "cd $repo/efem-dapp && npm install && npm run build; exec bash"
 
 # if you do not get any error, you are done. Use giveth-start.sh to start apps.
 # -----------------------------------------------------------------------------
