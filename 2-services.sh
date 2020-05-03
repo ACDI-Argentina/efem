@@ -39,13 +39,10 @@ cd go-ipfs
 ipfs init
 
 # Make sure you do not get CORS errors:
-#gnome-terminal --tab --title="ipfs" -- bash -c "ipfs daemon ; exec bash"
-ipfs daemon
-#sleep 10
-#gnome-terminal --tab --title="ipfs-cors1" -- bash -c "ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '[\"http://localhost\"]'; exec bash";
-ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '[\"http://localhost\"]'
-#gnome-terminal --tab --title="ipfs-cors2" -- bash -c "ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '[\"PUT\", \"GET\", \"POST\"]'";
-ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '[\"PUT\", \"GET\", \"POST\"]'
+gnome-terminal --tab --title="ipfs" -- bash -c "ipfs daemon ; exec bash"
+sleep 10
+gnome-terminal --tab --title="ipfs-cors1" -- bash -c "ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '[\"http://localhost\"]'; exec bash";
+gnome-terminal --tab --title="ipfs-cors2" -- bash -c "ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '[\"PUT\", \"GET\", \"POST\"]'";
 # check:
 ipfs config show
 # ipfs config edit
@@ -60,3 +57,13 @@ cd ..
 cd rsk-node
 rm rskj-core-1.3.0-WASABI-all.jar
 wget https://github.com/rsksmart/rskj/releases/download/WASABI-1.3.0/rskj-core-1.3.0-WASABI-all.jar
+
+
+echo '--------------------------------------'
+echo 'Ganache'
+echo '--------------------------------------'
+cd ..
+cd ganache
+rm ganache-2.3.2-linux-x86_64.AppImage
+wget https://github.com/trufflesuite/ganache/releases/download/v2.3.2/ganache-2.3.2-linux-x86_64.AppImage
+chmod a+x ganache*.AppImage

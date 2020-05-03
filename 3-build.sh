@@ -45,7 +45,7 @@ echo '--------------------------------------'
 #------------- feathers-giveth
 # This will remove mongo db for a fresh start (e.g. first time)
 #gnome-terminal --tab --title="EFEM Feathers Build" -- bash -c "cd $repo/efem-feathers && echo yes | npm install && yarn deploy-local; exec bash"
-cd efem-feathers
+cd efem-dapp-feathers
 npm install
 cd ..
 #gnome-terminal --tab --title="EFEM Feathers Build" -- bash -c "cd $repo/efem-feathers && echo yes | npm install ; exec bash"

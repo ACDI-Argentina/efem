@@ -12,6 +12,12 @@
 export repo=/home/mauricio/dev/project/acdi/efem
 
 echo '--------------------------------------'
+echo 'Ganache'
+echo '--------------------------------------'
+gnome-terminal --tab --title="Ganache Start" -- bash -c "cd ganache && ./ganache*.AppImage ; exec bash"
+
+
+echo '--------------------------------------'
 echo 'RSK Node Start'
 echo '--------------------------------------'
 gnome-terminal --tab --title="RSK Node Start" -- bash -c "cd rsk-node && java -jar -Drsk.conf.file=regtest.conf rskj-core-1.3.0-WASABI-all.jar co.rsk.Start ; exec bash"
@@ -19,8 +25,7 @@ gnome-terminal --tab --title="RSK Node Start" -- bash -c "cd rsk-node && java -j
 echo '--------------------------------------'
 echo 'IPFS Start'
 echo '--------------------------------------'
-#gnome-terminal --tab --title="start ipfs" -- bash -c "ipfs daemon ; exec bash"
-ipfs daemon
+gnome-terminal --tab --title="start ipfs" -- bash -c "ipfs daemon ; exec bash"
 
 echo '--------------------------------------'
 echo 'EFEM Mailer Start'

@@ -29,6 +29,3 @@ sudo apt update
 sudo apt-get install nodejs
 npm -v
 node -v
-
-# Ganache
-#sudo apt install libcanberra-gtk-module libcanberra-gtk3-module

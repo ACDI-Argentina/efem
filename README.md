@@ -22,6 +22,7 @@ Probado sobre **Ubuntu 18.04.3 LTS**.
     - IPFS
     - MongoDB
     - RSK Node
+    - Ganache
 
 ```
     $ sudo ./2-services.sh
@@ -37,6 +38,8 @@ Probado sobre **Ubuntu 18.04.3 LTS**.
 ```
 
 - Inicio de los servicios y módulos.
+    - Ganache
+    - RSK Node
     - IPFS
     - [EFEM Mailer](https://github.com/ACDI-Argentina/efem-mailer)
     - [EFEM Feathers](https://github.com/ACDI-Argentina/efem-feathers)
