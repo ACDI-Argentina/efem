@@ -44,11 +44,14 @@ Para todos los scripts ejecutados en este apartado, se requiere establecer el di
 
 #### 3.2. RSK Node
 
+Ejecutar en una terminal separada.
+
 ```
     $ ./3.2-dapp-feathers-rsk-node.sh
 ```
 
 Si no hay salida por consola, el nodo inició correctamente.
+La terminal debe mantenerse abierta para que el nodo esté activo.
 
 #### 3.3. Deploy Smart Contracts
 
@@ -66,7 +69,7 @@ Sobre los prompts requeridos, responder lo siguiente:
 
 Tras la finalización, se debe adaptar la configuración con la salida de la terminal en los siguientes módulos:
 
-- EFEM Dapp Feathers: *scripts/getNodeConfig.js*, case *rsk*.
+- EFEM Dapp Feathers: *scripts/config/getNodeConfig.js*, case *rsk*.
 - EFEM Dapp UI: *.env*.
 
 #### 3.4. Inicialización EFEM Dapp Feathers
