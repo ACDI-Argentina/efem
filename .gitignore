@@ -1,7 +1,2 @@
 # IPFS Go installer
 go-ipfs*
-
-# RSK Node
-/rsk-node/rskj-core-*-all.jar
-/rsk-node/logs
-/rsk-node/database
