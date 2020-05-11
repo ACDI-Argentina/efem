@@ -2,11 +2,23 @@
 
 La documentación sobre el proyecto se encuentra en la [wiki](https://github.com/ACDI-Argentina/efem/wiki).
 
+## Visión general de la arquitectura
+
+![EFEM Arquitecture Overview](architecture-overview.png)
+
+Como se observa, el usuario se conecta a una aplicación web desentralizada (Dapp), la cual interactúa con Feathers y con la blockchain de RSK para el almacenamiento de datos on-chain.
+
+Feathers utiliza una base de datos MongoDB para almacenar datos del usuario y cache de datos de la blockchain RSK y con IPFS para almacenar archivos.
+
+La blockchain de RSK es donde se ejecutan los smart contracts de la aplicación.
+
 ## Ejecución
 
 En este apartado se encuentran las instrucciones para realizar el build y ejecución del proyecto. Las instrucciones están basadas en el trabajo de [Jurek Brisbane](https://github.com/Giveth/giveth-dapp/files/3674808/givethBuildStartScripts_2019-09-29.zip).
 
 Probado sobre **Ubuntu 18.04.3 LTS**.
+
+
 
 ### 1. Instalación de herramientas
 
