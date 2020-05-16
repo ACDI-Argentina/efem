@@ -12,12 +12,11 @@ Feathers utiliza una base de datos MongoDB para almacenar datos del usuario y ca
 
 La blockchain de RSK es donde se ejecutan los smart contracts de la aplicación.
 
-## Ejecución
+## Setup e inicialización
 
-En este apartado se encuentran las instrucciones para realizar el build y ejecución del proyecto. Las instrucciones están basadas en el trabajo de [Jurek Brisbane](https://github.com/Giveth/giveth-dapp/files/3674808/givethBuildStartScripts_2019-09-29.zip).
+En este apartado se encuentran las instrucciones para realizar el build y ejecución del proyecto. Las instrucciones están basadas en el [trabajo de Jurek Brisbane](https://github.com/Giveth/giveth-dapp/files/3674808/givethBuildStartScripts_2019-09-29.zip).
 
 Probado sobre **Ubuntu 18.04.3 LTS**.
-
 
 
 ### 1. Instalación de herramientas
@@ -27,7 +26,7 @@ Herramientas requeridas: *OpenJDK 8*, *YARN*, *Node.js* y *NPM*.
 El proyecto no funciona sobre la última versión LTS de Node.js, por lo que se instala *NVM* + *Node.js v10*.
 
 ```
-    $ ./1-tools.sh
+    $ ./1-tools-install.sh
 ```
 
 ### 2. Instalación de servicios
@@ -35,12 +34,16 @@ El proyecto no funciona sobre la última versión LTS de Node.js, por lo que se 
 Servicios requeridos: *MongoDB* e *IPFS*
 
 ```
-    $ ./2-services.sh
+    $ ./2.1-services-install.sh
+```
+
+```
+    $ ./2.2-services-start.sh
 ```
 
 ### 3. Setup de EFEM Dapp Feathers
 
-El setup del módulo implica la instalación de sus dependencias, inicialización de un nodo *RSK*, despliegue de smart contracts e inicialición de *Feathers*.
+El setup del módulo implica la instalación de sus dependencias, inicialización de un nodo *RSK*, despliegue de smart contracts e inicialización de *Feathers*.
 
 Para todos los scripts ejecutados en este apartado, se requiere establecer el directorio *HOME* donde se encuentran los fuentes del módulo *EFEM Dapp Feathers*. Por ejemplo:
 
@@ -92,7 +95,7 @@ Tras la finalización, se debe adaptar la configuración con la salida de la ter
 
 ### 4. Setup de EFEM Dapp UI
 
-El setup del módulo implica la instalación de sus dependencias e inicialición de la UI.
+El setup del módulo implica la instalación de sus dependencias e inicialización de la UI.
 
 Para todos los scripts ejecutados en este apartado, se requiere establecer el directorio *HOME* donde se encuentran los fuentes del módulo *EFEM Dapp UI*. Por ejemplo:
 
@@ -111,3 +114,34 @@ Para todos los scripts ejecutados en este apartado, se requiere establecer el di
 ```
     $ ./4.2-dapp-ui-start.sh
 ```
+
+### Inicialización
+
+Una vez que la aplicación se encuentre configurada y funcionando, las inicializaciones posteriores no requieren de la ejecución de todos los scripr nuevamente, sino que solamente se requiere lo siguiente:
+
+Terminal 1
+```
+    $ ./2.2-services-start.sh
+```
+
+Terminal 2
+```
+    $ export EFEM_DAPP_FEATHERS_SOURCE_HOME=/home/user/dev/project/acdi/efem/efem-dapp-feathers
+    $ ./3.2-dapp-feathers-rsk-node.sh
+```
+
+Terminal 3
+```
+    $ export EFEM_DAPP_FEATHERS_SOURCE_HOME=/home/user/dev/project/acdi/efem/efem-dapp-feathers
+    $ ./3.4-dapp-feathers-start.sh
+```
+
+Terminal 4
+```
+    $ export EFEM_DAPP_UI_SOURCE_HOME=/home/user/dev/project/acdi/efem/efem-dapp-ui
+    $ ./4.2-dapp-ui-start.sh
+```
+
+### Uso de la aplicación
+
+Las instrucciones de uso de la aplicación se encuentran en el [manual de usuario](https://github.com/ACDI-Argentina/efem/wiki/Manual).
