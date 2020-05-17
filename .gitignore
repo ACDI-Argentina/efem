@@ -1,2 +1,4 @@
 # IPFS Go installer
 go-ipfs*
+
+.setenv
