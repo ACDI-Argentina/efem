@@ -2,6 +2,8 @@ echo ''
 echo 'EFEM Dapp Feathers - Deploy Smart Contracts'
 echo '-------------------------------------------'
 
+source .setenv
+
 cd $EFEM_DAPP_FEATHERS_SOURCE_HOME
 
 source ~/.nvm/nvm.sh

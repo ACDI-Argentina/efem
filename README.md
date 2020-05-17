@@ -4,7 +4,7 @@ La documentación sobre el proyecto se encuentra en la [wiki](https://github.com
 
 ## Visión general de la arquitectura
 
-![EFEM Arquitecture Overview](architecture-overview.png)
+![EFEM Arquitecture Overview](architecture-overview.svg)
 
 Como se observa, el usuario se conecta a una aplicación web desentralizada (Dapp), la cual interactúa con Feathers y con la blockchain de RSK para el almacenamiento de datos on-chain.
 
@@ -47,8 +47,9 @@ El setup del módulo implica la instalación de sus dependencias, inicializació
 
 Para todos los scripts ejecutados en este apartado, se requiere establecer el directorio *HOME* donde se encuentran los fuentes del módulo *EFEM Dapp Feathers*. Por ejemplo:
 
+Configuración en *.setenv*:
 ```
-    $ export EFEM_DAPP_FEATHERS_SOURCE_HOME=/home/user/dev/project/acdi/efem/efem-dapp-feathers
+    EFEM_DAPP_FEATHERS_SOURCE_HOME="/home/user/dev/project/acdi/efem/efem-dapp-feathers"
 ```
 
 #### 3.1. Build
@@ -99,8 +100,9 @@ El setup del módulo implica la instalación de sus dependencias e inicializaci�
 
 Para todos los scripts ejecutados en este apartado, se requiere establecer el directorio *HOME* donde se encuentran los fuentes del módulo *EFEM Dapp UI*. Por ejemplo:
 
+Configuración en *.setenv*:
 ```
-    $ export EFEM_DAPP_UI_SOURCE_HOME=/home/user/dev/project/acdi/efem/efem-dapp-ui
+    EFEM_DAPP_UI_SOURCE_HOME="/home/user/dev/project/acdi/efem/efem-dapp-ui"
 ```
 
 #### 4.1. Build
@@ -126,22 +128,19 @@ Terminal 1
 
 Terminal 2
 ```
-    $ export EFEM_DAPP_FEATHERS_SOURCE_HOME=/home/user/dev/project/acdi/efem/efem-dapp-feathers
     $ ./3.2-dapp-feathers-rsk-node.sh
 ```
 
 Terminal 3
 ```
-    $ export EFEM_DAPP_FEATHERS_SOURCE_HOME=/home/user/dev/project/acdi/efem/efem-dapp-feathers
     $ ./3.4-dapp-feathers-start.sh
 ```
 
 Terminal 4
 ```
-    $ export EFEM_DAPP_UI_SOURCE_HOME=/home/user/dev/project/acdi/efem/efem-dapp-ui
     $ ./4.2-dapp-ui-start.sh
 ```
 
 ### Uso de la aplicación
 
-Las instrucciones de uso de la aplicación se encuentran en el [manual de usuario](https://github.com/ACDI-Argentina/efem/wiki/Manual).
+Las instrucciones de uso de la aplicación se encuentran en el [manual de usuario técnico](https://github.com/ACDI-Argentina/efem/wiki/Manual-tecnico).
