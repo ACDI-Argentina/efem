@@ -45,9 +45,8 @@ Servicios requeridos: *MongoDB* e *IPFS*
 
 El setup del módulo implica la instalación de sus dependencias, inicialización de un nodo *RSK*, despliegue de smart contracts e inicialización de *Feathers*.
 
-Para todos los scripts ejecutados en este apartado, se requiere establecer el directorio *HOME* donde se encuentran los fuentes del módulo *EFEM Dapp Feathers*. Por ejemplo:
+Para todos los scripts ejecutados en este apartado, se requiere establecer el directorio *HOME* donde se encuentran los fuentes del módulo *EFEM Dapp Feathers*. Crear un archivo (si aún no existe) denominado *.setenv* con la siguiente configuración:
 
-Configuración en *.setenv*:
 ```
     EFEM_DAPP_FEATHERS_SOURCE_HOME="/home/user/dev/project/acdi/efem/efem-dapp-feathers"
 ```
@@ -98,9 +97,8 @@ Tras la finalización, se debe adaptar la configuración con la salida de la ter
 
 El setup del módulo implica la instalación de sus dependencias e inicialización de la UI.
 
-Para todos los scripts ejecutados en este apartado, se requiere establecer el directorio *HOME* donde se encuentran los fuentes del módulo *EFEM Dapp UI*. Por ejemplo:
+Para todos los scripts ejecutados en este apartado, se requiere establecer el directorio *HOME* donde se encuentran los fuentes del módulo *EFEM Dapp UI*. Crear un archivo (si aún no existe) denominado *.setenv* con la siguiente configuración:
 
-Configuración en *.setenv*:
 ```
     EFEM_DAPP_UI_SOURCE_HOME="/home/user/dev/project/acdi/efem/efem-dapp-ui"
 ```
@@ -143,4 +141,4 @@ Terminal 4
 
 ### Uso de la aplicación
 
-Las instrucciones de uso de la aplicación se encuentran en el [manual de usuario técnico](https://github.com/ACDI-Argentina/efem/wiki/Manual-tecnico).
+Las instrucciones de uso de la aplicación se encuentran [aquí](https://github.com/ACDI-Argentina/efem/wiki/Instrucciones-uso).
