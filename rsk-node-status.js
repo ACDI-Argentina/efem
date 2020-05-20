@@ -24,3 +24,12 @@ web3.eth.getAccounts().then(accounts => {
 web3.eth.getBlockNumber().then(blockNumber => {
     console.log('Block Number: ' + blockNumber);
 });
+
+web3.eth.getAccounts().then(accounts => {
+    console.log('Balances');
+    accounts.forEach(account => {
+        web3.eth.getBalance(account).then(balance => {
+            console.log(`Balance ${account}: ${balance}`);
+        })
+    });
+});
