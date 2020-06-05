@@ -2,15 +2,13 @@
 
 La documentación sobre el proyecto se encuentra en la [wiki](https://github.com/ACDI-Argentina/efem/wiki).
 
-## Visión general de la arquitectura
+## Despliegue
 
-![EFEM Arquitecture Overview](architecture-overview.svg)
+![EFEM Despliegue](despliegue.svg)
 
-Como se observa, el usuario se conecta a una aplicación web desentralizada (Dapp), la cual interactúa con Feathers y con la blockchain de RSK para el almacenamiento de datos on-chain.
+Como se observa, el usuario se conecta a una aplicación web desentralizada (Dapp), la cual interactúa con Feathers y con la blockchain de RSK para el almacenamiento de datos on-chain. Para el almacenamiento de archivos se utiliza IPFS.
 
-Feathers utiliza una base de datos MongoDB para almacenar datos del usuario y cache de datos de la blockchain RSK y con IPFS para almacenar archivos.
-
-La blockchain de RSK es donde se ejecutan los smart contracts de la aplicación.
+Feathers utiliza una base de datos MongoDB para almacenar datos off-chain.
 
 ## Setup e inicialización
 
@@ -48,7 +46,7 @@ El setup del módulo implica la instalación de sus dependencias, inicializació
 Para todos los scripts ejecutados en este apartado, se requiere establecer el directorio *HOME* donde se encuentran los fuentes del módulo *EFEM Dapp Feathers*. Crear un archivo (si aún no existe) denominado *.setenv* con la siguiente configuración:
 
 ```
-    EFEM_DAPP_FEATHERS_SOURCE_HOME="/home/user/dev/project/acdi/efem/efem-dapp-feathers"
+    EFEM_DAPP_FEATHERS_SOURCE_HOME="/home/user/dev/project/acdi/efem/efem-crowdfunding-feathers"
 ```
 
 #### 3.1. Build
@@ -100,7 +98,7 @@ El setup del módulo implica la instalación de sus dependencias e inicializaci�
 Para todos los scripts ejecutados en este apartado, se requiere establecer el directorio *HOME* donde se encuentran los fuentes del módulo *EFEM Dapp UI*. Crear un archivo (si aún no existe) denominado *.setenv* con la siguiente configuración:
 
 ```
-    EFEM_DAPP_UI_SOURCE_HOME="/home/user/dev/project/acdi/efem/efem-dapp-ui"
+    EFEM_DAPP_UI_SOURCE_HOME="/home/user/dev/project/acdi/efem/efem-crowdfunding-dapp"
 ```
 
 #### 4.1. Build
@@ -141,4 +139,4 @@ Terminal 4
 
 ### Uso de la aplicación
 
-Las instrucciones de uso de la aplicación se encuentran [aquí](https://github.com/ACDI-Argentina/efem/wiki/Instrucciones-uso).
+Las instrucciones de uso de la aplicación se encuentran [aquí](https://github.com/ACDI-Argentina/efem-crowdfunding-dapp/wiki/Giveth-b4H-instrucciones-uso).
