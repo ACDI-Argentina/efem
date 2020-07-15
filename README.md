@@ -2,6 +2,8 @@
 
 La documentación sobre el proyecto se encuentra en la [wiki](https://github.com/ACDI-Argentina/efem/wiki).
 
+**Importante**: Esta documentación está obsoleta y es reemplazada por las instrucciones de [despliegue con Docker](https://github.com/ACDI-Argentina/efem-artifacts).
+
 ## Despliegue
 
 ![EFEM Despliegue](despliegue.svg)

@@ -20,7 +20,7 @@ web3.eth.getAccounts().then(accounts => {
     console.log('Accounts');
     console.log(accounts);
 });
-
+/*
 web3.eth.getBlockNumber().then(blockNumber => {
     console.log('Block Number: ' + blockNumber);
 });
@@ -32,4 +32,11 @@ web3.eth.getAccounts().then(accounts => {
             console.log(`Balance ${account}: ${balance}`);
         })
     });
+});*/
+
+let contractAddress = '0xAfCdFA78A5B7e86B317F7DbF95aB33A7aC920F77'
+let index = 0
+//console.log(web3.eth.getStorageAt(contractAddress, index))
+web3.eth.getStorageAt(contractAddress, index).then(s => {
+    console.log(s);
 });
